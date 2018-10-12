@@ -1,4 +1,5 @@
 import React from 'react';
+import ShoppingItemsList from './ShoppingItemsList';
 import logo from './logo.svg';
 import './App.css';
 
@@ -54,9 +55,7 @@ class App extends React.Component {
         </button>
 
         <p className="items">Items</p>
-        <ol className="item-list">
-          {this.state.items.map((item, index) => <li key={index}>{item}</li>)}
-        </ol>
+		<ShoppingItemsList items={this.state.items} />
       </div>
     );
   }
